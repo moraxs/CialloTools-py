@@ -28,11 +28,12 @@ jobs:
 
     - name: Build project
       run: |
-        pyinstaller --onefile --windowed --add-data="dist:dist" --icon="dist/favicon.ico" main.py
+        pyinstaller --onefile --windowed --add-data="dist:dist" --icon="dist/favicon.ico" --name="CialloTools" main.py
+        ls -la dist
 
     - name: Verify build output
       run: |
-        if [ ! -f "dist/cialloTools.exe" ]; then
+        if [ ! -f "dist/CialloTools.exe" ]; then
           echo "Build output not found!"
           exit 1
         fi
@@ -41,4 +42,4 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: build-artifact
-        path: dist/cialloTools.exe
+        path: dist/CialloTools.exe

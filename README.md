@@ -1,0 +1,1 @@
+pyinstaller --onefile --windowed --add-data "dist;dist" --icon="dist/favicon.ico" main.py
