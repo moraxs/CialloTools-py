@@ -23,7 +23,7 @@ jobs:
     - name: Build project
       run: |
         pyinstaller --onefile --windowed --add-data="dist:dist" --icon="dist/favicon.ico" --name="CialloTools" main.py
-        ls -la dist
+        
       working-directory: ${{ github.workspace }}
 
     
