@@ -28,7 +28,7 @@ jobs:
 
     - name: Build project
       run: |
-        pyinstaller --onefile --windowed --add-data "dist;dist" --icon="dist/favicon.ico" main.py
+        pyinstaller --onefile --windowed --add-data="dist:dist" --icon="dist/favicon.ico" main.py
 
     - name: Upload build artifact
       uses: actions/upload-artifact@v3
